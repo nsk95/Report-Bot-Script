@@ -1,0 +1,15 @@
+{
+    "name": "spyro/report-bot-script",
+    "description": "Report bot script",
+    "type": "project",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "spyrothelegend",
+            "email": "mail@me.de"
+        }
+    ],
+    "require": {
+        "filp/whoops": "^2.3"
+    }
+}

@@ -1,0 +1,99 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Report Bot Script Installer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
+
+        <script src="/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Report Bot Script Installer</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <a class="form-control" href="https://github.com/nsk95/Report-Bot-Script">Github</a>
+                        <a class="form-control" href="https://high-minded.net">High-Minded</a>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Installation:</h1>
+            <p> First we need your mysql-login credentials:</p>
+            <div class="row">
+                <div class="col-sm-8">
+                    <form role="form" id="mysqlform" name="mysqlfrom" onsubmit="event.preventDefault(); mysqlform();">
+                        <div class="form-group">
+                            <input type="text" placeholder="server" id="server" name="server" class="form-control" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="username" id="username" name="username" class="form-control" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="database" id="database" name="database" class="form-control" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="password" id="password" name="password" class="form-control" required="required">
+                        </div>
+                        <button type="submit" class="btn btn-success" href="#">Install</button>
+                    </form>
+                </div>
+                <div class="col-sm-4">
+                    <p class="text-muted">
+                        This script will add the required tables to your mysql-database. <br/>
+                        Regardless if they're empty or not. 
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="alert alert-success" id="success" style="display: none;">
+                        <strong>Success!</strong> credentials correct.
+                    </div>
+                    <div class="alert alert-danger" id="nosuccess" style="display: none;">
+                        <strong>Failed!</strong> credentials not correct.
+                    </div>
+                </div>
+            </div>
+            <!-- <footer>
+                <p>&copy; your pagename 2019</p>
+            </footer> -->
+        </div>
+    </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="/assets/js/vendor/bootstrap.min.js"></script>
+        <script src="/assets/js/main.js"></script>
+    </body>
+</html>
